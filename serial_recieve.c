@@ -18,10 +18,7 @@ void AES_ECB_encrypt(const struct AES_ctx* ctx, uint8_t* buf);
 int main(){
 
     stdio_init_all(); //Initialise I/O
-    // initialise GPIO (Green LED connected to pin 25)
-    //gpio_init(25);
-    //gpio_set_dir(25, GPIO_OUT);
-    //initialise trigger (pin 28)
+    //initialise trigger 
     gpio_init(16);
     gpio_set_dir(16, GPIO_OUT);
     gpio_put(25, 0); // Set pin 25 to low
@@ -33,9 +30,7 @@ int main(){
     char rand_bytes[16]; // array to generate PT
 
     while (1){
-        //gpio_put(25, 0); // Set pin 25 to low
-        //fgets(rand_bytes, sizeof(rand_bytes), stdin);
-        //if (sizeof(rand_bytes) == 16) {
+
         size_t bytes_read = fread(rand_bytes, 1, sizeof(rand_bytes), stdin);
         if (bytes_read == 16) {
             //printf(rand_bytes);
@@ -43,12 +38,8 @@ int main(){
             AES_ECB_encrypt(&ctx, rand_bytes);
             gpio_put(16, 0);
         }
-        //char hex_buf[2 * sizeof(rand_bytes) + 1];
-        //hexlify(rand_bytes, sizeof(rand_bytes), hex_buf, sizeof(hex_buf));
+
         printf(rand_bytes);
-        //AES_ECB_decrypt(&ctx, rand_bytes);
-        //printf(hex_buf);
-        //gpio_put(25, 1);
 
     }
 
