@@ -33,7 +33,6 @@ int main(){
 
         size_t bytes_read = fread(rand_bytes, 1, sizeof(rand_bytes), stdin);
         if (bytes_read == 16) {
-            //printf(rand_bytes);
             gpio_put(16, 1);
             AES_ECB_encrypt(&ctx, rand_bytes);
             gpio_put(16, 0);
