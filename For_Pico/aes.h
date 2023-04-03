@@ -1,5 +1,5 @@
 //
-// Created by Thilras Irfana on 21/2/23.
+// Copied from https://github.com/kokke/tiny-AES-c
 //
 
 #ifndef ENCRYPTION_AES_H
