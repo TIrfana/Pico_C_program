@@ -6,7 +6,7 @@ Collect traces,plaintext and ciphertext for Side Channel Attack on AES128 encryp
 The computer collects traces,plaintext and ciphertext for Side Channel Attack.
 
 ## Directions
-Download [For_Com](https://github.com/TIrfana/Pico_C_program/tree/main/For_Com) into your laptop and open in PyCharm.
+Download [File:PyCharms](https://github.com/TIrfana/Pico_C_program/tree/main/For_Com/PyCharms) into your laptop and open in PyCharm.
 
 Either drag and drop [uf2_file](https://github.com/TIrfana/Pico_C_program/blob/main/For_Pico/Encryption.uf2) into Pico 
 
