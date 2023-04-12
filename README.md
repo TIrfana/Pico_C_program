@@ -17,3 +17,4 @@ Either drag and drop [uf2_file](https://github.com/TIrfana/Pico_C_program/blob/m
 
 ### - Running experiment
 1. Connect Pico to laptop via mini usb to usb cable
+2. Laptop(Mac) : After connecting wait a few seconds, type `python -m serial.tools.list_ports` in terminal to find serial port
